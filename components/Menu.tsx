@@ -2,53 +2,38 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useLanguage } from '@/contexts/LanguageContext'
 
-const menuItems = [
-  {
-    id: 1,
-    name: 'Royal Espresso',
-    description: 'Rich and bold, our signature espresso blend',
-    price: '$8.50',
-    image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 2,
-    name: 'Golden Cappuccino',
-    description: 'Creamy perfection with a touch of elegance',
-    price: '$9.00',
-    image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 3,
-    name: 'Luxury Latte',
-    description: 'Smooth and velvety, a true indulgence',
-    price: '$9.50',
-    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 4,
-    name: 'Royal Mocha',
-    description: 'Chocolate meets coffee in perfect harmony',
-    price: '$10.00',
-    image: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 5,
-    name: 'Elegant Macchiato',
-    description: 'A delicate balance of espresso and foam',
-    price: '$8.00',
-    image: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 6,
-    name: 'Premium Cold Brew',
-    description: 'Smooth and refreshing, perfectly crafted',
-    price: '$9.50',
-    image: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  },
+const menuItemKeys = [
+  'royalEspresso',
+  'goldenCappuccino',
+  'luxuryLatte',
+  'royalMocha',
+  'elegantMacchiato',
+  'premiumColdBrew',
 ]
 
+const menuItemImages = [
+  'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+  'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+]
+
+const prices = ['$8.50', '$9.00', '$9.50', '$10.00', '$8.00', '$9.50']
+
 export default function Menu() {
+  const { t, language } = useLanguage()
+  
+  const menuItems = menuItemKeys.map((key, index) => ({
+    id: index + 1,
+    name: t(`menu.items.${key}.name`),
+    description: t(`menu.items.${key}.description`),
+    price: prices[index],
+    image: menuItemImages[index],
+  }))
   return (
     <section
       id="menu"
@@ -70,11 +55,11 @@ export default function Menu() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-serif font-bold text-royal-blue-accent mb-4">
-            Our Menu
+            {t('menu.title')}
           </h2>
           <div className="w-24 h-1 bg-royal-blue-accent mx-auto mb-6" />
           <p className="text-white-smoke/80 text-lg max-w-2xl mx-auto">
-            Discover our curated selection of premium coffee and beverages
+            {t('menu.description')}
           </p>
         </motion.div>
 
@@ -104,7 +89,7 @@ export default function Menu() {
                   whileHover={{ opacity: 1 }}
                   className="absolute inset-0 bg-royal-blue-accent/20 flex items-center justify-center"
                 >
-                  <span className="text-royal-blue-accent text-2xl font-bold">View</span>
+                  <span className="text-royal-blue-accent text-2xl font-bold">{t('menu.view')}</span>
                 </motion.div>
               </div>
               <div className="p-6">

@@ -1,22 +1,24 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function About() {
+  const { t } = useLanguage()
   const paragraphs = [
     {
       id: 1,
-      text: 'Welcome to Ashraf Café, where royal elegance meets the art of coffee. Since our inception, we have dedicated ourselves to creating an unparalleled coffee experience that transcends the ordinary.',
+      text: t('about.paragraphs.0'),
       direction: 'left' as const,
     },
     {
       id: 2,
-      text: 'Our master baristas craft each cup with precision and passion, using only the finest beans sourced from the world\'s most renowned coffee regions. Every sip tells a story of tradition, quality, and luxury.',
+      text: t('about.paragraphs.1'),
       direction: 'right' as const,
     },
     {
       id: 3,
-      text: 'Step into our sanctuary of sophistication, where the aroma of freshly brewed coffee mingles with the ambiance of refined elegance. Ashraf Café is more than a destination—it\'s an experience that awakens the senses.',
+      text: t('about.paragraphs.2'),
       direction: 'left' as const,
     },
   ]
@@ -59,7 +61,7 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-serif font-bold text-royal-blue-accent mb-4">
-            About Us
+            {t('about.title')}
           </h2>
           <div className="w-24 h-1 bg-royal-blue-accent mx-auto mb-6" />
         </motion.div>

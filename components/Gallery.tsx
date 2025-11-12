@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useState } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const galleryImages = [
   {
@@ -54,6 +55,7 @@ const galleryImages = [
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
+  const { t } = useLanguage()
 
   return (
     <section
@@ -70,11 +72,11 @@ export default function Gallery() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-serif font-bold text-royal-blue-accent mb-4">
-            Gallery
+            {t('gallery.title')}
           </h2>
           <div className="w-24 h-1 bg-royal-blue-accent mx-auto mb-6" />
           <p className="text-white-smoke/80 text-lg max-w-2xl mx-auto">
-            A glimpse into the elegant world of Ashraf Café
+            {t('gallery.description')}
           </p>
         </motion.div>
 

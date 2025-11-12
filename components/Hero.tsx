@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Hero() {
+  const { t } = useLanguage()
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [windowSize, setWindowSize] = useState({ width: 1920, height: 1080 })
 
@@ -81,7 +83,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3 }}
           className="text-6xl md:text-8xl lg:text-9xl font-serif font-bold text-white-smoke mb-4"
         >
-          Ashraf
+          {t('hero.title')}
         </motion.h1>
 
         <motion.div
@@ -90,7 +92,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.6 }}
           className="text-2xl md:text-4xl font-serif text-royal-blue-accent mb-8"
         >
-          Café
+          {t('hero.subtitle')}
         </motion.div>
 
         {/* Animated Underline */}
@@ -111,7 +113,7 @@ export default function Hero() {
           onClick={handleViewMenu}
           className="px-8 py-4 bg-transparent border-2 border-royal-blue-accent text-royal-blue-accent font-semibold text-lg rounded-none hover:bg-royal-blue-accent hover:text-deep-black transition-all duration-300 relative overflow-hidden group"
         >
-          <span className="relative z-10">View Menu</span>
+          <span className="relative z-10">{t('hero.viewMenu')}</span>
           <motion.div
             className="absolute inset-0 bg-royal-blue-accent"
             initial={{ x: '-100%' }}

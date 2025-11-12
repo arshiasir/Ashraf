@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { language, setLanguage, t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +18,11 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Menu', href: '#menu' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'About', href: '#about' },
+    { name: t('nav.home'), href: '#home' },
+    { name: t('nav.menu'), href: '#menu' },
+    { name: t('nav.gallery'), href: '#gallery' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.location'), href: '#location' },
   ]
 
   const handleLinkClick = (href: string) => {
@@ -70,6 +73,16 @@ export default function Navbar() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-royal-blue-accent transition-all duration-300 group-hover:w-full" />
               </motion.a>
             ))}
+            {/* Language Switcher */}
+            <motion.button
+              onClick={() => setLanguage(language === 'fa' ? 'en' : 'fa')}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-4 py-2 bg-royal-blue-accent/20 hover:bg-royal-blue-accent/30 text-white-smoke rounded-md transition-colors duration-300 font-medium text-sm border border-royal-blue-accent/30"
+              aria-label="Switch language"
+            >
+              {language === 'fa' ? 'EN' : 'FA'}
+            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -112,11 +125,13 @@ export default function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ x: '100%' }}
+            initial={{ x: language === 'fa' ? '-100%' : '100%' }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
+            exit={{ x: language === 'fa' ? '-100%' : '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed top-20 right-0 bottom-0 w-64 bg-royal-blue/98 backdrop-blur-md shadow-2xl md:hidden"
+            className={`fixed top-20 bottom-0 w-64 bg-royal-blue/98 backdrop-blur-md shadow-2xl md:hidden ${
+              language === 'fa' ? 'left-0' : 'right-0'
+            }`}
           >
             <div className="flex flex-col p-8 space-y-6">
               {navLinks.map((link, index) => (
@@ -127,7 +142,7 @@ export default function Navbar() {
                     e.preventDefault()
                     handleLinkClick(link.href)
                   }}
-                  initial={{ opacity: 0, x: 50 }}
+                  initial={{ opacity: 0, x: language === 'fa' ? -50 : 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className="text-white-smoke hover:text-royal-blue-accent text-xl font-medium transition-colors duration-300"
@@ -135,6 +150,20 @@ export default function Navbar() {
                   {link.name}
                 </motion.a>
               ))}
+              {/* Mobile Language Switcher */}
+              <motion.button
+                onClick={() => {
+                  setLanguage(language === 'fa' ? 'en' : 'fa')
+                  setIsMobileMenuOpen(false)
+                }}
+                initial={{ opacity: 0, x: language === 'fa' ? -50 : 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: navLinks.length * 0.1 }}
+                className="px-4 py-2 bg-royal-blue-accent/20 hover:bg-royal-blue-accent/30 text-white-smoke rounded-md transition-colors duration-300 font-medium text-lg border border-royal-blue-accent/30 mt-4"
+                aria-label="Switch language"
+              >
+                {language === 'fa' ? 'English' : 'فارسی'}
+              </motion.button>
             </div>
           </motion.div>
         )}

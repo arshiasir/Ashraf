@@ -1,9 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const { t } = useLanguage()
 
   const socialLinks = [
     { 
@@ -37,7 +39,7 @@ export default function Footer() {
               Ashraf Café
             </h3>
             <p className="text-white-smoke/70 text-sm leading-relaxed">
-              Where royal elegance meets the art of coffee. Experience luxury in every cup.
+              {t('footer.tagline')}
             </p>
           </motion.div>
 
@@ -48,15 +50,21 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h4 className="text-white-smoke font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-white-smoke font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
-              {['Home', 'Menu', 'Gallery', 'About'].map((link) => (
-                <li key={link}>
+              {[
+                { key: 'home', href: '#home' },
+                { key: 'menu', href: '#menu' },
+                { key: 'gallery', href: '#gallery' },
+                { key: 'about', href: '#about' },
+                { key: 'location', href: '#location' },
+              ].map((link) => (
+                <li key={link.key}>
                   <a
-                    href={`#${link.toLowerCase()}`}
+                    href={link.href}
                     className="text-white-smoke/70 hover:text-royal-blue-accent transition-colors text-sm"
                   >
-                    {link}
+                    {t(`nav.${link.key}`)}
                   </a>
                 </li>
               ))}
@@ -70,7 +78,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h4 className="text-white-smoke font-semibold mb-4">Follow Us</h4>
+            <h4 className="text-white-smoke font-semibold mb-4">{t('footer.followUs')}</h4>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <motion.a
@@ -99,10 +107,10 @@ export default function Footer() {
           className="border-t border-royal-blue-accent/20 pt-8 text-center"
         >
           <p className="text-white-smoke/60 text-sm">
-            © {currentYear} Ashraf Café. All rights reserved.
+            © {currentYear} Ashraf Café. {t('footer.copyright')}
           </p>
           <p className="text-white-smoke/50 text-xs mt-2">
-            123 Royal Avenue, New York, NY 10001
+            {t('footer.address')}
           </p>
         </motion.div>
       </div>
