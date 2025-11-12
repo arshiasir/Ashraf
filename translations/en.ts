@@ -56,7 +56,7 @@ export default {
   },
   location: {
     title: 'Location',
-    address: 'Pishva opposite Azad University Cafe Ashraf',
+    address: 'Pishva opposite the main gate of Azad University - Ashraf Cafe',
     coordinates: '35°18\'37.2"N 51°44\'31.3"E',
     viewOnGoogleMaps: 'View on Google Maps',
   },
@@ -65,7 +65,7 @@ export default {
     quickLinks: 'Quick Links',
     followUs: 'Follow Us',
     copyright: 'All rights reserved.',
-    address: 'Pishva opposite Azad University Cafe Ashraf',
+    address: 'Pishva opposite the main gate of Azad University - Ashraf Cafe',
   },
 }
 
