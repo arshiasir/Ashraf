@@ -15,6 +15,11 @@ export default {
     title: 'Our Menu',
     description: 'Discover our curated selection of premium coffee and beverages',
     view: 'View',
+    categories: {
+      hot: 'Hot',
+      cold: 'Cold',
+      breakfast: 'Breakfast',
+    },
     items: {
       royalEspresso: {
         name: 'Royal Espresso',
@@ -39,6 +44,72 @@ export default {
       premiumColdBrew: {
         name: 'Premium Cold Brew',
         description: 'Smooth and refreshing, perfectly crafted',
+      },
+      hot: {
+        espresso: {
+          name: 'Espresso',
+          price: '40',
+        },
+        cappuccino: {
+          name: 'Cappuccino',
+          price: '90',
+        },
+        chocolate: {
+          name: 'Hot/White/Pink Chocolate',
+          price: '90',
+        },
+        blackTea: {
+          name: 'Black Tea',
+          price: '40',
+        },
+        masalaTea: {
+          name: 'Masala Tea',
+          price: '100',
+        },
+        latte: {
+          name: 'Latte / Mocha / Caramel Macchiato',
+          price: '100',
+        },
+      },
+      cold: {
+        lemonade: {
+          name: 'Lemonade',
+          price: '100',
+        },
+        mojito: {
+          name: 'Mojito',
+          price: '110',
+        },
+        carrotJuice: {
+          name: 'Carrot Juice',
+          price: '90',
+        },
+        pomegranateJuice: {
+          name: 'Pomegranate Juice',
+          price: '100',
+        },
+        shake: {
+          name: 'Chocolate / Banana / Strawberry Shake',
+          price: '175',
+        },
+        bananaSmoothie: {
+          name: 'Banana Smoothie',
+          price: '125',
+        },
+      },
+      breakfast: {
+        omelette: {
+          name: 'Omelette',
+          price: '120',
+        },
+        friedEgg: {
+          name: 'Fried Egg',
+          price: '100',
+        },
+        iranian: {
+          name: 'Iranian (Cheese, Walnut, Butter, Jam, Honey, Tea)',
+          price: '295',
+        },
       },
     },
   },

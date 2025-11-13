@@ -15,6 +15,11 @@ export default {
     title: 'منوی ما',
     description: 'مجموعه منتخب قهوه و نوشیدنی‌های ممتاز ما را کشف کنید',
     view: 'مشاهده',
+    categories: {
+      hot: 'گرم',
+      cold: 'سرد',
+      breakfast: 'صبحانه',
+    },
     items: {
       royalEspresso: {
         name: 'اسپرسوی سلطنتی',
@@ -39,6 +44,72 @@ export default {
       premiumColdBrew: {
         name: 'کولد برو ممتاز',
         description: 'نرم و طراوت‌بخش، کاملاً دست‌ساز',
+      },
+      hot: {
+        espresso: {
+          name: 'اسپرسو',
+          price: '۴۰',
+        },
+        cappuccino: {
+          name: 'کاپوچینو',
+          price: '۹۰',
+        },
+        chocolate: {
+          name: 'هات/وایت/پینک چاکلت',
+          price: '۹۰',
+        },
+        blackTea: {
+          name: 'چای سیاه',
+          price: '۴۰',
+        },
+        masalaTea: {
+          name: 'چای ماسالا',
+          price: '۱۰۰',
+        },
+        latte: {
+          name: 'لته / موکا / کارامل ماکیاتو',
+          price: '۱۰۰',
+        },
+      },
+      cold: {
+        lemonade: {
+          name: 'لیموناد',
+          price: '۱۰۰',
+        },
+        mojito: {
+          name: 'موهیتو',
+          price: '۱۱۰',
+        },
+        carrotJuice: {
+          name: 'آب‌هویج',
+          price: '۹۰',
+        },
+        pomegranateJuice: {
+          name: 'آب انار',
+          price: '۱۰۰',
+        },
+        shake: {
+          name: 'شیک شکلات / موز / توت فرنگی',
+          price: '۱۷۵',
+        },
+        bananaSmoothie: {
+          name: 'اسموتی موز',
+          price: '۱۲۵',
+        },
+      },
+      breakfast: {
+        omelette: {
+          name: 'املت',
+          price: '۱۲۰',
+        },
+        friedEgg: {
+          name: 'نیمرو',
+          price: '۱۰۰',
+        },
+        iranian: {
+          name: 'ایرانی  (پنیر، گردو، کره، مربا، عسل، چای)',
+          price: '۲۹۵',
+        },
       },
     },
   },
