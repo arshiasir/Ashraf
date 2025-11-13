@@ -207,7 +207,7 @@ export default function MenuSection() {
 
 	return (
 		<section
-			id="menu-printed"
+			id="menu"
 			className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-charcoal-gray"
 		>
 			{/* Background Decoration */}
@@ -232,33 +232,6 @@ export default function MenuSection() {
 			</div>
 
 			<div className="relative z-10 max-w-6xl mx-auto">
-				{/* Header */}
-				<motion.div
-					initial={{ opacity: 0, y: 30 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.6 }}
-					className="text-center mb-6 md:mb-8"
-				>
-					<h2
-						className={`${playfair.variable} font-[var(--font-playfair)] text-3xl md:text-5xl font-bold text-royal-blue-accent mb-4`}
-					>
-						Ashraf Café
-					</h2>
-					<p
-						className="font-vazir text-sm md:text-base text-white-smoke/80 mt-2"
-					>
-						منوی ویژه
-					</p>
-					<motion.div
-						initial={{ width: 0 }}
-						whileInView={{ width: '7rem' }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.8, ease: 'easeInOut' }}
-						className="h-1 bg-royal-blue-accent mx-auto mt-4"
-					/>
-				</motion.div>
-
 				{/* Sticky Tabs */}
 				<div className="sticky top-0 z-20 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 bg-charcoal-gray/80 backdrop-blur-md border-b border-white-smoke/10">
 					<nav className="max-w-6xl mx-auto flex gap-2 md:gap-4 py-3 overflow-x-auto justify-center">

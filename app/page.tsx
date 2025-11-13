@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
-import Menu from '@/components/Menu'
 import MenuSection from '@/components/MenuSection'
 import Gallery from '@/components/Gallery'
 import About from '@/components/About'
@@ -12,7 +11,6 @@ export default function Home() {
     <main className="relative">
       <Navbar />
       <Hero />
-      <Menu />
       <MenuSection />
       <Gallery />
       <About />
