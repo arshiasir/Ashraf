@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
@@ -40,12 +41,16 @@ export default function Hero() {
     >
       {/* Background Image/Video Overlay */}
       <div className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/image/hero-background.jpg')",
-          }}
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="/image/hero-background.jpg"
+            alt="Hero background"
+            fill
+            priority
+            className="object-cover"
+            quality={90}
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80" />
       </div>
 
