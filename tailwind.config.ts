@@ -27,9 +27,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'Poppins', 'sans-serif'],
-        vazir: ['Vazir', 'Inter', 'Poppins', 'sans-serif'],
+        serif: ['Georgia', 'Times New Roman', 'Times', 'serif'],
+        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Vazir', 'sans-serif'],
+        vazir: ['Vazir', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
