@@ -16,13 +16,20 @@ const config: Config = {
           bright: '#2E7AB8',
           accent: '#4A9FE0',
         },
+        'royal-blue-accent': '#2E7AB8',
         'deep-black': '#000000',
         'charcoal-gray': '#1C1C1C',
         'white-smoke': '#F5F5F5',
+        'gold': {
+          DEFAULT: '#C9A227',
+          light: '#D4B547',
+          dark: '#B8941F',
+        },
       },
       fontFamily: {
         serif: ['Playfair Display', 'serif'],
         sans: ['Inter', 'Poppins', 'sans-serif'],
+        vazir: ['Vazir', 'Inter', 'Poppins', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

@@ -14,12 +14,12 @@ const menuItemKeys = [
 ]
 
 const menuItemImages = [
-  'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+  '/image/menu-espresso.jpg',
+  '/image/menu-cappuccino.jpg',
+  '/image/menu-latte.jpg',
+  '/image/gallery-latte-art.jpg',
+  '/image/gallery-latte-art.jpg',
+  '/image/gallery-latte-art.jpg',
 ]
 
 const prices = ['$8.50', '$9.00', '$9.50', '$10.00', '$8.00', '$9.50']

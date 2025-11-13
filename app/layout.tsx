@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className="bg-deep-black text-white-smoke antialiased">
+      <body className="bg-deep-black text-white-smoke antialiased font-vazir">
         <LanguageProvider>
           {children}
         </LanguageProvider>

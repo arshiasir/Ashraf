@@ -8,47 +8,47 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const galleryImages = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: '/image/gallery-coffee-shop-interior.jpg',
     alt: 'Coffee shop interior',
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: '/image/gallery-coffee-beans.jpg',
     alt: 'Coffee beans',
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: '/image/gallery-coffee-cup.jpg',
     alt: 'Coffee cup',
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: '/image/gallery-latte-art.jpg',
     alt: 'Latte art',
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: '/image/gallery-coffee-cup.jpg',
     alt: 'Coffee preparation',
   },
   {
     id: 6,
-    src: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: '/image/gallery-coffee-shop-interior.jpg',
     alt: 'Café ambiance',
   },
   {
     id: 7,
-    src: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: '/image/gallery-coffee-beans.jpg',
     alt: 'Coffee selection',
   },
   {
     id: 8,
-    src: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: '/image/gallery-coffee-cup.jpg',
     alt: 'Barista at work',
   },
   {
     id: 9,
-    src: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    src: '/image/gallery-latte-art.jpg',
     alt: 'Coffee presentation',
   },
 ]

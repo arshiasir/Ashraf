@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+
+/* Local Vazir Font Face Declarations */
+@font-face {
+  font-family: 'Vazir';
+  src: url('../font/Vazir-Medium.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('../font/Vazir-Bold.woff') format('woff'),
+       url('../font/Vazir-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('../Vazir.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -18,13 +43,20 @@ html {
 body {
   background-color: #000000;
   color: #F5F5F5;
-  font-family: 'Inter', 'Poppins', 'Vazirmatn', sans-serif;
+  font-family: 'Inter', 'Poppins', 'Vazir', sans-serif;
   overflow-x: hidden;
 }
 
-/* Persian font support */
-html[dir='rtl'] body {
-  font-family: 'Vazirmatn', 'Inter', 'Poppins', sans-serif;
+/* Persian font support - Use Vazir for RTL/Persian text */
+html[dir='rtl'] body,
+html[lang='fa'] body {
+  font-family: 'Vazir', 'Inter', 'Poppins', sans-serif;
+}
+
+/* Ensure all Persian text uses Vazir */
+[lang='fa'],
+[dir='rtl'] {
+  font-family: 'Vazir', 'Inter', 'Poppins', sans-serif;
 }
 
 /* Custom scrollbar */
