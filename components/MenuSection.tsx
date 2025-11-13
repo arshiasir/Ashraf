@@ -1,17 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Playfair_Display } from 'next/font/google'
 import Image from 'next/image'
 import React, { useCallback, useMemo, useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
-
-const playfair = Playfair_Display({
-	subsets: ['latin'],
-	weight: ['400', '600', '700'],
-	variable: '--font-playfair',
-	display: 'swap',
-})
 
 type MenuItem = {
 	name: string
