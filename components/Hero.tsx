@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0">
           <Image
-            src="/image/hero-background.jpg"
+            src="https://c243690.parspack.net/c243690/ashraf/hero-background.jpg"
             alt="Hero background"
             fill
             priority

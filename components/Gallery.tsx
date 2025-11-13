@@ -8,47 +8,47 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const galleryImages = [
   {
     id: 1,
-    src: '/image/gallery-coffee-shop-interior.jpg',
+    src: 'https://c243690.parspack.net/c243690/ashraf/gallery-coffee-shop-interior.jpg',
     alt: 'Coffee shop interior',
   },
   {
     id: 2,
-    src: '/image/gallery-coffee-beans.jpg',
+    src: 'https://c243690.parspack.net/c243690/ashraf/gallery-coffee-beans.jpg',
     alt: 'Coffee beans',
   },
   {
     id: 3,
-    src: '/image/gallery-coffee-cup.jpg',
+    src: 'https://c243690.parspack.net/c243690/ashraf/gallery-coffee-cup.jpg',
     alt: 'Coffee cup',
   },
   {
     id: 4,
-    src: '/image/gallery-latte-art.jpg',
+    src: 'https://c243690.parspack.net/c243690/ashraf/gallery-latte-art.jpg',
     alt: 'Latte art',
   },
   {
     id: 5,
-    src: '/image/gallery-coffee-cup.jpg',
+    src: 'https://c243690.parspack.net/c243690/ashraf/gallery-coffee-cup.jpg',
     alt: 'Coffee preparation',
   },
   {
     id: 6,
-    src: '/image/gallery-coffee-shop-interior.jpg',
+    src: 'https://c243690.parspack.net/c243690/ashraf/gallery-coffee-shop-interior.jpg',
     alt: 'Café ambiance',
   },
   {
     id: 7,
-    src: '/image/gallery-coffee-beans.jpg',
+    src: 'https://c243690.parspack.net/c243690/ashraf/gallery-coffee-beans.jpg',
     alt: 'Coffee selection',
   },
   {
     id: 8,
-    src: '/image/gallery-coffee-cup.jpg',
+    src: 'https://c243690.parspack.net/c243690/ashraf/gallery-coffee-cup.jpg',
     alt: 'Barista at work',
   },
   {
     id: 9,
-    src: '/image/gallery-latte-art.jpg',
+    src: 'https://c243690.parspack.net/c243690/ashraf/gallery-latte-art.jpg',
     alt: 'Coffee presentation',
   },
 ]

@@ -109,32 +109,32 @@ export default function MenuSection() {
 				{ 
 					name: t('menu.items.hot.espresso.name'), 
 					price: t('menu.items.hot.espresso.price'),
-					image: '/image/menu-espresso.jpg'
+					image: 'https://c243690.parspack.net/c243690/ashraf/menu-espresso.jpg'
 				},
 				{ 
 					name: t('menu.items.hot.cappuccino.name'), 
 					price: t('menu.items.hot.cappuccino.price'),
-					image: '/image/menu-cappuccino.jpg'
+					image: 'https://c243690.parspack.net/c243690/ashraf/menu-cappuccino.jpg'
 				},
 				{ 
 					name: t('menu.items.hot.chocolate.name'), 
 					price: t('menu.items.hot.chocolate.price'),
-					image: '/image/menu-chocolate.jpg'
+					image: 'https://c243690.parspack.net/c243690/ashraf/menu-chocolate.jpg'
 				},
 				{ 
 					name: t('menu.items.hot.blackTea.name'), 
 					price: t('menu.items.hot.blackTea.price'),
-					image: '/image/Blacktea.jpg'
+					image: 'https://c243690.parspack.net/c243690/ashraf/Blacktea.jpg'
 				},
 				{ 
 					name: t('menu.items.hot.masalaTea.name'), 
 					price: t('menu.items.hot.masalaTea.price'),
-					image: '/image/menu-masala-tea.jpg'
+					image: 'https://c243690.parspack.net/c243690/ashraf/menu-masala-tea.jpg'
 				},
 				{ 
 					name: t('menu.items.hot.latte.name'), 
 					price: t('menu.items.hot.latte.price'),
-					image: '/image/menu-latte.jpg'
+					image: 'https://c243690.parspack.net/c243690/ashraf/menu-latte.jpg'
 				},
 			],
 		}),
@@ -148,32 +148,32 @@ export default function MenuSection() {
 				{ 
 					name: t('menu.items.cold.lemonade.name'), 
 					price: t('menu.items.cold.lemonade.price'),
-					image: '/image/limonade.webp'
+					image: 'https://c243690.parspack.net/c243690/ashraf/limonade.webp'
 				},
 				{ 
 					name: t('menu.items.cold.mojito.name'), 
 					price: t('menu.items.cold.mojito.price'),
-					image: '/image/menu-mojito.jpg'
+					image: 'https://c243690.parspack.net/c243690/ashraf/menu-mojito.jpg'
 				},
 				{ 
 					name: t('menu.items.cold.carrotJuice.name'), 
 					price: t('menu.items.cold.carrotJuice.price'),
-					image: '/image/Carrotjuice.jpg'
+					image: 'https://c243690.parspack.net/c243690/ashraf/Carrotjuice.jpg'
 				},
 				{ 
 					name: t('menu.items.cold.pomegranateJuice.name'), 
 					price: t('menu.items.cold.pomegranateJuice.price'),
-					image: '/image/Pomegranatejuice.webp'
+					image: 'https://c243690.parspack.net/c243690/ashraf/Pomegranatejuice.webp'
 				},
 				{ 
 					name: t('menu.items.cold.shake.name'), 
 					price: t('menu.items.cold.shake.price'),
-					image: '/image/menu-chocolate.jpg'
+					image: 'https://c243690.parspack.net/c243690/ashraf/menu-chocolate.jpg'
 				},
 				{ 
 					name: t('menu.items.cold.bananaSmoothie.name'), 
 					price: t('menu.items.cold.bananaSmoothie.price'),
-					image: '/image/menu-banana-smoothie.jpg'
+					image: 'https://c243690.parspack.net/c243690/ashraf/menu-banana-smoothie.jpg'
 				},
 			],
 		}),
@@ -187,17 +187,17 @@ export default function MenuSection() {
 				{ 
 					name: t('menu.items.breakfast.omelette.name'), 
 					price: t('menu.items.breakfast.omelette.price'),
-					image: '/image/Omelette.jpeg'
+					image: 'https://c243690.parspack.net/c243690/ashraf/Omelette.jpeg'
 				},
 				{ 
 					name: t('menu.items.breakfast.friedEgg.name'), 
 					price: t('menu.items.breakfast.friedEgg.price'),
-					image: '/image/menu-iranian-breakfast.jpg'
+					image: 'https://c243690.parspack.net/c243690/ashraf/menu-iranian-breakfast.jpg'
 				},
 				{ 
 					name: t('menu.items.breakfast.iranian.name'), 
 					price: t('menu.items.breakfast.iranian.price'),
-					image: '/image/iranian.webp'
+					image: 'https://c243690.parspack.net/c243690/ashraf/iranian.webp'
 				},
 			],
 		}),
